@@ -1,0 +1,60 @@
+# * RELOAD EXCEPTION: ~require~ order might not be valid.
+# An uninitialized constant exception was thrown while files were being loaded. Please note
+# that DragonRuby's ~require~ method is asynchronous. Which means that a class cannot
+# be used within the same file in which it is required.
+# 
+# If you are using requires, it's recommended that =app/main.rb= only contains require statements
+# and that you should create a file called =app/tick.rb= that you ~require~ last.
+# 
+# Here is a sample structure:
+# 
+# Let's assume the follow directory hierarchy.
+# 
+# #+begin_src
+# + mygame/
+# + app/
+# + enemy.rb
+# + game.rb
+# + main.rb
+# + player.rb
+# #+end_src
+# 
+# This is what =app/main.rb= would look like.
+# 
+# #+begin_src ruby
+# #####################
+# # main.rb
+# #####################
+# # 1. app/main.rb should only contain ~require~ statements.
+# # 2. The paths should be fully qualified relative your mygame directory.
+# # 3. Files should be ordered based on dependencies.
+# require 'app/enemy.rb'  # Game relies on Enemy.
+# require 'app/player.rb' # Game relies on Player.
+# require 'app/game.rb'   # Game definition.
+# require 'app/tick.rb'   # =app/tick.rb= which contains the ~tick~ method.
+# #+end_src
+# 
+# This is what =app/tick.rb= would look like.
+# 
+# #+begin_src ruby
+# #####################
+# # tick.rb
+# #####################
+# # Given that =app/tick.rb= is the last ~require~ statement in =app/main.rb=, all classes should
+# # be available.
+# $game = Game.new(Player.new, Enemy.new)
+# 
+# def tick args
+# $game.tick
+# end
+# #+end_src
+# 
+# * EXCEPTION: uninitialized constant CUBE_SIZE
+# ** NOTE: See explanation above for a possible fix to this error.
+# The full text for this exception is located in =./logs/exceptions/current.txt= and =./logs/log.txt= if you
+# do not want to read it within the Console.
+# ** Backtrace:
+# *** app/main.rb:7
+
+Game State:
+{:state=>{:entity_id=>1, :tick_count=>-1}, :temp_state=>{}, :inputs=>{:controller_one=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_two=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_three=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_four=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :keyboard=>{:key_up=>{:truthy_keys=>[]}, :key_held=>{:truthy_keys=>[]}, :key_down=>{:truthy_keys=>[]}, :has_focus=>false}, :mouse=>{:x=>1242.0, :y=>253.0, :moved=>nil, :moved_at=>111591, :has_focus=>true}, :text=>[]}, :passes=>[], :outputs=>{:solids=>[], :sprites=>[], :lines=>[], :labels=>[], :sounds=>[], :borders=>[], :primitives=>[], :static_solids=>[], :static_borders=>[], :static_sprites=>[], :static_lines=>[], :static_labels=>[], :static_primitives=>[]}, :grid=>{:device_top=>720, :device_bottom=>0.0, :origin_x=>0.0, :device_left=>0.0, :ffi_draw=>"", :device_right=>1280, :native_height=>720, :allscreen_offset_x=>0, :origin_y=>720, :native_width=>1280, :left=>0.0, :allscreen_height=>720, :right=>1280, :device_height=>720, :top=>720, :allscreen_offset_y=>0, :runtime=>{:argv=>"/Users/santiago/Desktop/libro_object_oriented_juegos/dragonruby-gtk-macos/dragonruby-macos/dragonruby", :platform=>"Mac OS X", :required_files=>[], :reload_list_history=>{"app/main.rb"=>{:current=>{:path=>"app/main.rb", :global_at=>443419, :event=>:processing}, :history=>[{:path=>"app/main.rb", :global_at=>-1, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>-1, :event=>:processing}, {:path=>"app/main.rb", :global_at=>-1, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>27719, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>27720, :event=>:processing}, {:path=>"app/main.rb", :global_at=>27721, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>42299, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>42300, :event=>:processing}, {:path=>"app/main.rb", :global_at=>42301, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>44341, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>44342, :event=>:processing}, {:path=>"app/main.rb", :global_at=>44343, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>45121, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>45122, :event=>:processing}, {:path=>"app/main.rb", :global_at=>45123, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>45663, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>45664, :event=>:processing}, {:path=>"app/main.rb", :global_at=>45665, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>66363, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>66364, :event=>:processing}, {:path=>"app/main.rb", :global_at=>66365, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>66845, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>66846, :event=>:processing}, {:path=>"app/main.rb", :global_at=>66847, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>70625, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>70626, :event=>:processing}, {:path=>"app/main.rb", :global_at=>70627, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>72307, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>72308, :event=>:processing}, {:path=>"app/main.rb", :global_at=>72309, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>94689, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>94690, :event=>:processing}, {:path=>"app/main.rb", :global_at=>94691, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>99971, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>99972, :event=>:processing}, {:path=>"app/main.rb", :global_at=>99973, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>307291, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>307291, :event=>:processing}, {:path=>"app/main.rb", :global_at=>307292, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>331807, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>331807, :event=>:processing}, {:path=>"app/main.rb", :global_at=>331808, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>443418, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>443419, :event=>:processing}]}}}, :device_width=>1280, :bottom=>0.0, :allscreen_bottom=>0, :left_margin=>0.0, :name=>:bottom_left, :allscreen_width=>1280, :allscreen_right=>1280, :bottom_margin=>0.0, :allscreen_top=>720, :center_x=>640.0, :rect=>[0.0, 0.0, 1280, 720], :native_scale_enum=>100, :allscreen_left=>0, :native_scale=>1.0, :center_y=>360.0, :center=>[640.0, 360.0]}}

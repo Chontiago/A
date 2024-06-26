@@ -1,0 +1,22 @@
+# * EXCEPTION:
+# * ERROR - :+ method missing on ~Class~.
+# The method named
+# :+
+# with args
+# [1]
+# doesn't exist on
+# [NilClass].
+# #+begin_src ~Class#inspect~
+# NIL
+# #+end_src ~Class#inspect~ for :+ method missing on ~Class~
+# ** Backtrace:
+# *** app/main.rb:118:in score
+# *** app/main.rb:114:in score
+# *** app/main.rb:77:in gameplay_state
+# *** app/main.rb:69:in game_state
+# *** app/main.rb:160:in tick
+# *** app/main.rb:166:in tick
+# *** app/main.rb:164
+
+Game State:
+{:state=>{:entity_id=>1, :tick_count=>143, :__thrash_count__=>{:+=>1}, :game=>#<Game:0x7ff6b52a6d70>}, :temp_state=>{}, :inputs=>{:controller_one=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_two=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_three=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_four=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :keyboard=>{:key_up=>{:truthy_keys=>[]}, :key_held=>{:truthy_keys=>[]}, :key_down=>{:truthy_keys=>[]}, :has_focus=>true}, :mouse=>{:x=>1246.0, :y=>205.0, :moved=>nil, :moved_at=>73, :has_focus=>true}, :text=>[]}, :passes=>[], :outputs=>{:solids=>[{:x=>675.0, :y=>0, :w=>100, :h=>50, :fallspeed=>5}, {:x=>907, :y=>670, :w=>50, :h=>50, :fallspeed=>5}, {:x=>889, :y=>670, :w=>50, :h=>50, :fallspeed=>1}, {:x=>1135, :y=>-50, :w=>50, :h=>50, :fallspeed=>3}, {:x=>452, :y=>-50, :w=>50, :h=>50, :fallspeed=>1}, {:x=>100, :y=>-50, :w=>50, :h=>50, :fallspeed=>4}, {:x=>1035, :y=>-50, :w=>50, :h=>50, :fallspeed=>5}, {:x=>887, :y=>-50, :w=>50, :h=>50, :fallspeed=>5}, {:x=>563, :y=>-50, :w=>50, :h=>50, :fallspeed=>3}, {:x=>562, :y=>-50, :w=>50, :h=>50, :fallspeed=>3}, {:x=>1265, :y=>-50, :w=>50, :h=>50, :fallspeed=>4}], :sprites=>[], :lines=>[], :labels=>[{:x=>1180, :y=>720, :anchor_x=>0.5, :anchor_y=>0.5, :text=>"SCORE: 0"}], :sounds=>[], :borders=>[], :primitives=>[], :static_solids=>[], :static_borders=>[], :static_sprites=>[], :static_lines=>[], :static_labels=>[], :static_primitives=>[]}, :grid=>{:device_top=>720, :device_bottom=>0.0, :origin_x=>0.0, :device_left=>0.0, :ffi_draw=>"", :device_right=>1280, :native_height=>720, :allscreen_offset_x=>0, :origin_y=>720, :native_width=>1280, :left=>0.0, :allscreen_height=>720, :right=>1280, :device_height=>720, :top=>720, :allscreen_offset_y=>0, :runtime=>{:argv=>"/Users/santiago/Desktop/libro_object_oriented_juegos/dragonruby-gtk-macos/dragonruby-macos/dragonruby", :platform=>"Mac OS X", :required_files=>[], :reload_list_history=>{"app/main.rb"=>{:current=>{:path=>"app/main.rb", :global_at=>12494, :event=>:reload_completed}, :history=>[{:path=>"app/main.rb", :global_at=>-1, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>-1, :event=>:processing}, {:path=>"app/main.rb", :global_at=>-1, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>2339, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>2340, :event=>:processing}, {:path=>"app/main.rb", :global_at=>2341, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>7439, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>7440, :event=>:processing}, {:path=>"app/main.rb", :global_at=>7441, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>8281, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>8282, :event=>:processing}, {:path=>"app/main.rb", :global_at=>8283, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>11641, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>11642, :event=>:processing}, {:path=>"app/main.rb", :global_at=>11643, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>12303, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>12304, :event=>:processing}, {:path=>"app/main.rb", :global_at=>12305, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>12493, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>12493, :event=>:processing}, {:path=>"app/main.rb", :global_at=>12494, :event=>:reload_completed}]}}}, :device_width=>1280, :bottom=>0.0, :allscreen_bottom=>0, :left_margin=>0.0, :name=>:bottom_left, :allscreen_width=>1280, :allscreen_right=>1280, :bottom_margin=>0.0, :allscreen_top=>720, :center_x=>640.0, :rect=>[0.0, 0.0, 1280, 720], :native_scale_enum=>100, :allscreen_left=>0, :native_scale=>1.0, :center_y=>360.0, :center=>[640.0, 360.0]}}

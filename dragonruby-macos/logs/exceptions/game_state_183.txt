@@ -1,0 +1,23 @@
+# * EXCEPTION:
+# * ERROR - :player method missing on ~Game~.
+# The method named
+# :player
+# doesn't exist on
+# [Game, #<Class:#<Game:0x7fa8dba424a0>>, Game].
+# #+begin_src ~Game#inspect~
+# #<Game:0x7fa8dba424a0>
+# #+end_src ~Game#inspect~ for :player method missing on ~Game~
+# 
+# ** Did you mean?
+# Here's a list of methods that kind of look like :player.
+# *** :player_bounds, *** :player_movement
+# ** Backtrace:
+# *** app/main.rb:92:in player_bounds
+# *** app/main.rb:63:in gameplay_state
+# *** app/main.rb:57:in game_state
+# *** app/main.rb:139:in tick
+# *** app/main.rb:145:in tick
+# *** app/main.rb:143
+
+Game State:
+{:state=>{:entity_id=>3, :tick_count=>183, :__thrash_count__=>{}, :game=>#<Game:0x7fa8dba424a0>}, :temp_state=>{}, :inputs=>{:controller_one=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_two=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_three=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_four=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :keyboard=>{:key_up=>{:truthy_keys=>[]}, :key_held=>{:raw_key=>178, :right=>65, :truthy_keys=>[:raw_key, :right]}, :key_down=>{:raw_key=>1073741903, :truthy_keys=>[:raw_key]}, :has_focus=>true}, :mouse=>{:x=>1051.0, :y=>558.0, :moved=>nil, :moved_at=>-1, :has_focus=>true}, :text=>[]}, :passes=>[], :outputs=>{:solids=>[{:x=>1180.0, :y=>0, :w=>100, :h=>50}, {:x=>640.0, :y=>475, :w=>50, :h=>50}], :sprites=>[], :lines=>[], :labels=>[{:x=>1180, :y=>720, :anchor_x=>0.5, :anchor_y=>0.5, :text=>"SCORE: 1"}], :sounds=>[], :borders=>[], :primitives=>[], :static_solids=>[], :static_borders=>[], :static_sprites=>[], :static_lines=>[], :static_labels=>[], :static_primitives=>[]}, :grid=>{:device_top=>720, :device_bottom=>0.0, :origin_x=>0.0, :device_left=>0.0, :ffi_draw=>"", :device_right=>1280, :native_height=>720, :allscreen_offset_x=>0, :origin_y=>720, :native_width=>1280, :left=>0.0, :allscreen_height=>720, :right=>1280, :device_height=>720, :top=>720, :allscreen_offset_y=>0, :runtime=>{:argv=>"/Users/santiago/Desktop/libro_object_oriented_juegos/dragonruby-gtk-macos/dragonruby-macos/dragonruby", :platform=>"Mac OS X", :required_files=>[], :reload_list_history=>{"app/main.rb"=>{:current=>{:path=>"app/main.rb", :global_at=>-1, :event=>:reload_completed}, :history=>[{:path=>"app/main.rb", :global_at=>-1, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>-1, :event=>:processing}, {:path=>"app/main.rb", :global_at=>-1, :event=>:reload_completed}]}}}, :device_width=>1280, :bottom=>0.0, :allscreen_bottom=>0, :left_margin=>0.0, :name=>:bottom_left, :allscreen_width=>1280, :allscreen_right=>1280, :bottom_margin=>0.0, :allscreen_top=>720, :center_x=>640.0, :rect=>[0.0, 0.0, 1280, 720], :native_scale_enum=>100, :allscreen_left=>0, :native_scale=>1.0, :center_y=>360.0, :center=>[640.0, 360.0]}}

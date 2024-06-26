@@ -1,0 +1,20 @@
+# * EXCEPTION:
+# * ERROR - :call method missing on ~Symbol~.
+# The method
+# :call
+# doesn't exist on :"@player.x_position -= 1".
+# 
+# ** Did you mean?
+# Here's a list of methods that kind of look like :call.
+# *** :caller
+# ** Backtrace:
+# *** app/main.rb:107:in key_pressed
+# *** app/main.rb:89:in player_movement
+# *** app/main.rb:71:in gameplay
+# *** app/main.rb:65:in game_state
+# *** app/main.rb:118:in tick
+# *** app/main.rb:125:in tick
+# *** app/main.rb:123
+
+Game State:
+{:state=>{:entity_id=>3, :tick_count=>482, :__thrash_count__=>{}, :game=>#<Game:0x7fa4bd4e0790>}, :temp_state=>{}, :inputs=>{:controller_one=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_two=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_three=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_four=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :keyboard=>{:key_up=>{:truthy_keys=>[]}, :key_held=>{:truthy_keys=>[]}, :key_down=>{:char=>"a", :raw_key=>97, :a=>481, :truthy_keys=>[:char, :raw_key, :a]}, :has_focus=>true}, :mouse=>{:x=>1147.0, :y=>446.0, :moved=>nil, :moved_at=>446, :has_focus=>true}, :text=>["a"]}, :passes=>[], :outputs=>{:solids=>[{:x=>590.0, :y=>0, :w=>100, :h=>50, :r=>0, :g=>0, :b=>255}, {:x=>615.0, :y=>670, :w=>50, :h=>50, :r=>255, :g=>0, :b=>0}], :sprites=>[], :lines=>[], :labels=>[], :sounds=>[], :borders=>[], :primitives=>[], :static_solids=>[], :static_borders=>[], :static_sprites=>[], :static_lines=>[], :static_labels=>[], :static_primitives=>[]}, :grid=>{:device_top=>720, :device_bottom=>0.0, :origin_x=>0.0, :device_left=>0.0, :ffi_draw=>"", :device_right=>1280, :native_height=>720, :allscreen_offset_x=>0, :origin_y=>720, :native_width=>1280, :left=>0.0, :allscreen_height=>720, :right=>1280, :device_height=>720, :top=>720, :allscreen_offset_y=>0, :runtime=>{:argv=>"/Users/santiago/Desktop/libro_object_oriented_juegos/dragonruby-gtk-macos/dragonruby-macos/dragonruby", :platform=>"Mac OS X", :required_files=>[], :reload_list_history=>{"app/main.rb"=>{:current=>{:path=>"app/main.rb", :global_at=>1201, :event=>:reload_completed}, :history=>[{:path=>"app/main.rb", :global_at=>-1, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>-1, :event=>:processing}, {:path=>"app/main.rb", :global_at=>-1, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>1199, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>1200, :event=>:processing}, {:path=>"app/main.rb", :global_at=>1201, :event=>:reload_completed}]}}}, :device_width=>1280, :bottom=>0.0, :allscreen_bottom=>0, :left_margin=>0.0, :name=>:bottom_left, :allscreen_width=>1280, :allscreen_right=>1280, :bottom_margin=>0.0, :allscreen_top=>720, :center_x=>640.0, :rect=>[0.0, 0.0, 1280, 720], :native_scale_enum=>100, :allscreen_left=>0, :native_scale=>1.0, :center_y=>360.0, :center=>[640.0, 360.0]}}
